@@ -1,76 +1,50 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>rovalles.github.io by rovalles</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>rovalles.github.io by rovalles</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>rovalles.github.io</h1>
-        <p>testing this stuff out</p>
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Rodolfo Ovalles</h1>
+                <p>testing this stuff out</p>
 
 
-        <p class="view"><a href="https://github.com/rovalles">View My GitHub Profile</a></p>
+                <p class="view"><a href="https://github.com/rovalles">View My GitHub Profile</a></p>
 
-      </header>
-      <section>
-        <h3>
-<a name="rovallesgithubio" class="anchor" href="#rovallesgithubio"><span class="octicon octicon-link"></span></a>rovalles.github.io</h3>
+            </header>
+            <section>
+                <script id="github" type="text/x-handlebars-template">
+                    {{#data}}
+                        {{#unless fork}}
+                            <h3>
+                                <a name="{{name}}" class="anchor" href="{{html_url}}">
+                                    <span class="octicon octicon-link"></span>
+                                </a>
+                                {{name}}
+                            </h3>
+                            <p>-Last updated {{updated_at}}</p>
+                        {{/unless}}
+                    {{/data}}
+                </script>
+            </section>
+            <footer>
+                <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+            </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script src="javascripts/scale.fix.js"></script>
+        <script src="javascripts/handlebars.js"></script>
+        <script src="javascripts/scripts.js"></script>
 
-<p>-Last updated 10 minutes ago</p>
-
-<h3>
-<a name="revolver" class="anchor" href="#revolver"><span class="octicon octicon-link"></span></a>revolver</h3>
-
-<p>-jquery plugin
--Last updated an hour ago
--JavaScript</p>
-
-<h3>
-<a name="fyf" class="anchor" href="#fyf"><span class="octicon octicon-link"></span></a>FYF</h3>
-
-<p>-Fuck Yea Fridays!
--Last updated an hour ago
--VimL</p>
-
-<h3>
-<a name="methamphetaminevim" class="anchor" href="#methamphetaminevim"><span class="octicon octicon-link"></span></a>methamphetamine.vim</h3>
-
-<p>-Vim color scheme
--Last updated 2 hours ago
--JavaScript</p>
-
-<h3>
-<a name="woodhouse" class="anchor" href="#woodhouse"><span class="octicon octicon-link"></span></a>Woodhouse</h3>
-
-<p>-Last updated 14 days ago
--JavaScript</p>
-
-<h3>
-<a name="resize_imagemaps" class="anchor" href="#resize_imagemaps"><span class="octicon octicon-link"></span></a>resize_imagemaps</h3>
-
-<p>-Last updated 3 months ago
--Shell</p>
-
-<h3>
-<a name="g" class="anchor" href="#g"><span class="octicon octicon-link"></span></a>g</h3>
-
-<p>-Call git commands on all repos that are in the same directory.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+    </body>
 </html>
