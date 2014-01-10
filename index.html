@@ -32,7 +32,11 @@
                                 </a>
                                 {{name}}
                             </h3>
-                            <p>-Last updated {{updated_at}}</p>
+                            <p>
+                                {{#if description}}- {{elipses description}} {{/if}}
+                                {{#if updated_at}}- Updated {{date updated_at}} days ago{{/if}}
+                                {{#if language}}- {{language}} {{/if}}
+                            </p>
                         {{/unless}}
                     {{/data}}
                 </script>
