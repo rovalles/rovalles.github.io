@@ -1,0 +1,21 @@
+{
+  "name": "rovalles.github.io",
+  "version": "1.0.0",
+  "description": "rovalles.github.io ==================",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rovalles/rovalles.github.io.git"
+  },
+  "author": "Rodolfo Ovalles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rovalles/rovalles.github.io/issues"
+  },
+  "homepage": "https://github.com/rovalles/rovalles.github.io#readme",
+  "dependencies": {}
+}
