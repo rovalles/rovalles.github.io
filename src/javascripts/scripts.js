@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
   Handlebars.registerHelper('elipses', function(description) {
       return description.length > 30 ? description.substr(0,29) + '...' : description;
   });
