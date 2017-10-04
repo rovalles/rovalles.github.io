@@ -5,7 +5,7 @@ $(function(){
 
   Handlebars.registerHelper('date', function(date) {
       var newDate = moment(date);
-      return newDate.format('MMMM Do YYYY');
+      return newDate.format('MMMM D, YYYY');
   });
 
 

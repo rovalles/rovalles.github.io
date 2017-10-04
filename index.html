@@ -17,6 +17,7 @@
                 <h1>Rodolfo Ovalles</h1>
                 <p>testing this stuff out</p>
                 <p class="view"><a href="https://github.com/rovalles">View My GitHub Profile</a></p>
+                <p><small>Theme originally by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
             </header>
             <section>
                 <script id="github" type="text/x-handlebars-template">
@@ -30,18 +31,15 @@
                                   </a>
                               </h3>
                               <ul>
-                                  {{#if language}} <li>{{language}}</li> {{/if}}
-                                  {{#if description}} <li>{{elipses description}}</li> {{/if}}
-                                  {{#if updated_at}} <li>Updated {{date updated_at}} days ago</li> {{/if}}
+                                  {{#if language}}    <li> {{language}}</li> {{/if}}
+                                  {{#if description}} <li> {{elipses description}}</li> {{/if}}
+                                  {{#if updated_at}}  <li></strong> {{date updated_at}}</li> {{/if}}
                               </ul>
                             </div>
                         {{/unless}}
                     {{/data}}
                 </script>
             </section>
-            <footer>
-                <p><small>Theme originally by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-            </footer>
         </div>
         <!--script src="bower_components/moment/min/moment.min.js"></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
