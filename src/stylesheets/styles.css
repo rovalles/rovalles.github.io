@@ -1,5 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
+.social a{
+  font-size: 20px;
+  color: #777;
+  margin-left:10px;
+}
+
+.social a:hover{
+  color: #39c;
+}
+
 body {
   padding:50px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -38,7 +48,7 @@ h3, h4, h5, h6 {
 
 a {
   color:#39c;
-  font-weight:400;
+  font-weight:600;
   text-decoration:none;
 }
 
@@ -63,13 +73,6 @@ a small {
   left: 0;
 }
 
-blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
-}
-
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   color:#333;
@@ -84,30 +87,6 @@ pre {
   overflow-x: auto;
 }
 
-table {
-  width:100%;
-  border-collapse:collapse;
-}
-
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-dt {
-  color:#444;
-  font-weight:700;
-}
-
-th {
-  color:#444;
-}
-
-img {
-  max-width:100%;
-}
-
 header {
   width:270px;
   float:left;
@@ -118,28 +97,6 @@ header {
 header h1,
 header p{
     margin-bottom: 10px;
-}
-
-
-
-strong {
-  font-weight:700;
-}
-
-header ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-header ul a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
 }
 
 section {
@@ -153,10 +110,6 @@ section ul {
   margin-left: 0;
   padding-bottom: 28px;
   border-bottom: 1px dotted #39c;
-}
-
-small {
-  font-size:11px;
 }
 
 hr {
@@ -179,10 +132,6 @@ hr {
     width:auto;
   }
 
-  header {
-    padding-right:320px;
-  }
-
   section {
     border-top:1px dotted #39c;
     border-width:1px 0;
@@ -190,8 +139,8 @@ hr {
     margin:0 0 20px;
   }
 
-  header a small {
-    display:inline;
+  header{
+    text-align: center;
   }
 
   header ul {
