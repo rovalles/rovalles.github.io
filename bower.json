@@ -19,6 +19,7 @@
     "jquery": "^3.2.1",
     "handlebars": "^4.0.10",
     "moment": "^2.18.1",
-    "flat-social-icons": "^0.0.3"
+    "flat-social-icons": "^0.0.3",
+    "bootstrap": "v4.0.0-alpha.6"
   }
 }

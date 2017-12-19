@@ -1,64 +1,75 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>Rodolfo Ovalles</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Rodolfo Ovalles</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
+    <link rel="stylesheet" href="bower_components/flat-social-icons/flat-icons.css">
+    <link rel="stylesheet" href="dist/bundle.css">
+  </head>
+  <body>
 
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="src/stylesheets/styles.css">
-         <link rel="stylesheet" href="bower_components/flat-social-icons/flat-icons.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    </head>
-    <body>
-        <div id="topBar"></div>
-        <div class="wrapper">
-            <header>
-                <h1>Rodolfo Ovalles</h1>
-                <p>testing this stuff out</p>
-                <p class="social view">
-                  <!-- <a href="https://github.com/rovalles">View My GitHub Profile</a> -->
-                  <a target="_blank" href="https://github.com/rovalles"><i class="fl-icon-github"></i></a>
-                  <a target="_blank" href="https://www.linkedin.com/in/rodolfoovalles"><i class="fl-icon-linkedin"></i></a>
-                </p>
-                <p><small>Theme originally by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-            </header>
-            <section>
-                <script id="github" type="text/x-handlebars-template">
-                    {{#data}}
-                        {{#unless fork}}
-                            <div class="projects">
-                              <h3>
-                                  <a name="{{name}}" class="anchor" href="{{html_url}}">
-                                      <span class="octicon octicon-link"></span>
-                                      {{name}}
-                                  </a>
-                              </h3>
-                              <ul>
-                                  {{#if language}}    <li> {{language}}</li> {{/if}}
-                                  {{#if description}} <li> {{elipses description}}</li> {{/if}}
-                                  {{#if updated_at}}  <li> {{date updated_at}}</li> {{/if}}
-                              </ul>
-                            </div>
-                        {{/unless}}
-                    {{/data}}
-                </script>
-            </section>
+    <hr id="topBar" />
+
+    <div class="container">
+      <div class="row">
+
+        <header class="col-4">
+					<div>
+						<h1>Rodolfo Ovalles</h1>
+						<p>Testing this stuff out</p>
+						<ul class="social list-inline">
+							<!-- <a href="https://github.com/rovalles">View My GitHub Profile</a> -->
+							<li class="list-inline-item"><a target="_blank" href="https://github.com/rovalles"><i class="fl-icon-github"></i></a></li>
+							<li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/rodolfoovalles"><i class="fl-icon-linkedin"></i></a></li>
+						</ul>
+						<p class="theme">
+							<small>Theme originally by <a href="https://github.com/orderedlist">orderedlist</a></small>
+						</p>
+					</div>
+        </header>
+
+        <div class="col-8 push-1">
+          <script id="github" type="text/x-handlebars-template">
+            {{#data}}
+              {{#unless fork}}
+                <section class="projects">
+                  <h2>
+                    <a name="{{name}}" class="anchor" href="{{html_url}}">
+                      <span class="octicon octicon-link"></span>
+                      {{name}}
+                    </a>
+                  </h2>
+                  <ul>
+                    {{#if language}}    <li> {{language}}</li> {{/if}}
+                    {{#if description}} <li> {{elipses description}}</li> {{/if}}
+                    {{#if updated_at}}  <li> {{date updated_at}}</li> {{/if}}
+                  </ul>
+                </section>
+              {{/unless}}
+            {{/data}}
+          </script>
         </div>
-        <!--script src="bower_components/moment/min/moment.min.js"></script>
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/handlebars/handlebars.min.js"></script>
-        <script src="src/javascripts/main.js"></script-->
-        <script src="dist/main.min.js"></script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-31183424-1', 'auto');
-          ga('send', 'pageview');
-        </script>
-    </body>
+      </div>
+    </div>
+    <!--script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/handlebars/handlebars.min.js"></script>
+    <script src="src/javascripts/main.js"></script-->
+    <script src="dist/bundle.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-31183424-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
 </html>
