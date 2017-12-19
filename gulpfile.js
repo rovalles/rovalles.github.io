@@ -8,7 +8,7 @@ gulp.task('default', function() {
     gulp.src([
       'src/stylesheets/main.scss'
     ])
-    // .pipe( sass({outputStyle: 'compressed'} ).on('error', sass.logError) )
+    .pipe( sass({outputStyle: 'compressed'} ).on('error', sass.logError) )
     .pipe( sass().on('error', sass.logError) )
     .pipe( concat('bundle.css') )
     .pipe( gulp.dest('dist') );
