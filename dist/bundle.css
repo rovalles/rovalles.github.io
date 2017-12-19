@@ -6037,3 +6037,7 @@ hr {
 
 .social a:hover {
   text-decoration: none; }
+
+@media (max-width: 1199px) {
+  header div {
+    position: static; } }

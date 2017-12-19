@@ -26,7 +26,7 @@ h1, h2{
 
 header div{
 	text-align: right;
-	position: fixed;
+  position: fixed;
 }
 
 // h1{
@@ -69,4 +69,10 @@ hr{
 
 .social a:hover{
 	text-decoration: none;
+}
+
+@include media-breakpoint-down(lg) {
+  header div{
+    position: static;
+  }
 }
