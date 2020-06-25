@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "description": "rovalles.github.io ==================",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "gulp-uglify": "^3.0.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rovalles/rovalles.github.io.git"
+  },
+  "scripts": {
+    "gulp": "gulp"
   },
   "author": "Rodolfo Ovalles",
   "license": "ISC",
@@ -18,5 +25,8 @@
     "url": "https://github.com/rovalles/rovalles.github.io/issues"
   },
   "homepage": "https://github.com/rovalles/rovalles.github.io#readme",
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.18.0",
+    "relift-html": "0.0.9"
+  }
 }

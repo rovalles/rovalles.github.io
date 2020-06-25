@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){axios({url:"https://api.github.com/users/rovalles/repos",method:"GET",responseType:"json"}).then(function(e){console.log(e)})});

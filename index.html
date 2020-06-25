@@ -6,9 +6,9 @@
     <title>Rodolfo Ovalles</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
-    <link rel="stylesheet" href="bower_components/flat-social-icons/flat-icons.css">
-    <link rel="stylesheet" href="dist/bundle.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
+       - <link rel="stylesheet" href="bower_components/flat-social-icons/flat-icons.css">
+       - <link rel="stylesheet" href="dist/bundle.css"> -->
   </head>
   <body>
 
@@ -26,42 +26,53 @@
 							<li class="list-inline-item"><a target="_blank" href="https://github.com/rovalles"><i class="fl-icon-github"></i></a></li>
 							<li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/rodolfoovalles"><i class="fl-icon-linkedin"></i></a></li>
 						</ul>
-						<p class="theme">
-							<small>Theme originally by <a href="https://github.com/orderedlist">orderedlist</a></small>
-						</p>
 					</div>
         </header>
 
-        <div class="col-8">
-          <script id="github" type="text/x-handlebars-template">
-            {{#data}}
-              {{#unless fork}}
-                <section class="projects">
-                  <h2>
-                    <a name="{{name}}" class="anchor" href="{{html_url}}">
-                      <span class="octicon octicon-link"></span>
-                      {{name}}
-                    </a>
-                  </h2>
-                  <ul>
-                    {{#if language}}    <li> {{language}}</li> {{/if}}
-                    {{#if description}} <li> {{elipses description}}</li> {{/if}}
-                    {{#if updated_at}}  <li> {{date updated_at}}</li> {{/if}}
-                  </ul>
-                </section>
-              {{/unless}}
-            {{/data}}
-          </script>
+        <div id="root" class="col-8">
+          <section
+            r-if="!d.fork"
+            r-for="d in this.projects" class="projects">
+            <h2>
+              <a name="{d.name}" class="anchor" href="{d.html_url}">
+                <span class="octicon octicon-link"></span>
+                {d.name}
+              </a>
+            </h2>
+            <ul>
+              <li> {d.language}</li>
+              <li> {d.description}</li>
+              <li> {d.updated_at}</li>
+            </ul>
+          </section>
         </div>
 
       </div>
     </div>
-    <!--script src="bower_components/moment/min/moment.min.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/handlebars/handlebars.min.js"></script>
-    <script src="src/javascripts/main.js"></script-->
-    <script src="dist/bundle.js"></script>
-    <script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module">
+      import reLiftHTML from 'https://unpkg.com/relift-html@0.0.9/dist/relift-html.esm.js';
+
+        reLiftHTML({
+          el: '#root',
+          data: {
+            projects: []
+          },
+          async created(){
+
+            let responses = await axios({
+              url: "https://api.github.com/users/rovalles/repos",
+              method: 'GET',
+              responseType: 'json'
+            });
+            this.data.projects = responses.data;
+            console.log(this.data);
+
+          }
+        });
+
+
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -70,6 +81,7 @@
       ga('create', 'UA-31183424-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <script type="module" src="dist/bundle.js"></script>
 
   </body>
 </html>
