@@ -2,12 +2,7 @@
   "name": "rovalles.github.io",
   "version": "1.0.0",
   "description": "rovalles.github.io ==================",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rovalles/rovalles.github.io.git"
