@@ -15,6 +15,7 @@ $(function(){
       dataType: 'jsonp',
       processDataBoolean: true,
       success: function(data){
+          console.log(data);
           var id = $("#github");
               source = id.html(),
               template = Handlebars.compile(source);
